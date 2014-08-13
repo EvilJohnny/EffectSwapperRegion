@@ -1,0 +1,72 @@
+.swapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right:0;
+	bottom: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	opacity: 1;
+}
+
+/* Sliding effect */
+.swapper.left {
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+
+.swapper.center {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.swapper.right {
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+/* Fade effect */
+.swapper.invisible {
+	opacity: 0;
+}
+
+.swapper.visible {
+	opacity: 1;
+}
+
+/* Appear effect */
+.swapper.goback {
+	/*-webkit-transform: translateZ(-100);
+	transform: translateZ(-100);*/
+	z-index: 5;
+}
+
+.swapper.minimized {
+	z-index: 10;
+	-webkit-transform:scale(0,0); /* Chrome, Safari, Opera */
+	transform:scale(0,0);/* translateZ(10); /* Standard syntax */
+	opacity: 0;
+}
+
+.swapper.maximized {
+	z-index: 7;
+	-webkit-transform:scale(1,1); /* Chrome, Safari, Opera */
+	transform:scale(1,1);/* Standard syntax */
+	opacity: 1;
+}
+
+/* Different transition speeds */
+.swapper.transition-fast{
+	-webkit-transition-duration: .25s;
+	transition-duration: .25s;
+}
+
+.swapper.transition {
+	-webkit-transition-duration: .55s;
+	transition-duration: .55s;
+}
+
+.swapper.transition-slow {
+	-webkit-transition-duration: .95s;
+	transition-duration: .95s;
+}
